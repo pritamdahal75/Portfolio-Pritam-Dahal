@@ -176,7 +176,44 @@ footer { text-align: center; padding: 20px; background: #222; color: white; }
 @keyframes grow { from { width: 0; } }
 
 /* ================================ Dark Mode ================================ */
-.dark { background: #121212; color: #eee; }
-.dark .card { background: #1e1e1e; }
-.dark nav { background: #000; }
+/* ================================ Dark Mode ================================ */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode nav {
+  background: #000;
+}
+
+body.dark-mode nav a,
+body.dark-mode nav button {
+  color: #eee;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #555;
+}
+
+body.dark-mode .social-btn {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .social-btn.github { background-color: #24292e; }
+body.dark-mode .social-btn.linkedin { background-color: #0077b5; }
+body.dark-mode .social-btn.instagram { background-color: #E1306C; }
+
 
