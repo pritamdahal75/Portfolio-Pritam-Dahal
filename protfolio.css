@@ -11,6 +11,12 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
 }
+/* Force all content visible */
+.reveal, header, section, .flex, .card {
+  opacity: 1 !important;
+  transform: none !important;
+  display: block !important;
+}
 
 /* ================================ Navbar ================================ */
 nav {
@@ -173,3 +179,4 @@ footer { text-align: center; padding: 20px; background: #222; color: white; }
 .dark { background: #121212; color: #eee; }
 .dark .card { background: #1e1e1e; }
 .dark nav { background: #000; }
+
