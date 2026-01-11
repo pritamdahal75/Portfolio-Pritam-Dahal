@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pritam Dahal | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="protfolio.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+  <img src="profiile.jpg" alt="Profile" class="profile-img">
+  <h1>Pritam Dahal</h1>
+  <p>Aspiring Frontend Developer</p>
+
+  <div class="social">
+    <a href="https://github.com/pritamdahal75" class="social-btn github" target="_blank">
+      <i class="fab fa-github"> </i>GitHub
+    </a>
+    <a href="https://www.instagram.com/pritamdahal75/" target="_blank" class="social-btn instagram">
+      <i class="fab fa-instagram"></i>Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/pritamdahal75" target="_blank" class="social-btn linkedin"> 
+      <i class="fab fa-linkedin"></i>LinkedIn
+    </a>
+  </div>
+
+  <a href="cv.pdf" download class="btn">📄 Download CV</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m <b>Pritam Dahal</b>, a BCA student learning frontend development.
+    I love building clean UI, animations, and modern web designs.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill">
+    <span>HTML</span>
+    <div class="bar"><div style="width:90%" data-percent="90"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar"><div style="width:75%" data-percent="75"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div style="width:50%" data-percent="50"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Python</span>
+    <div class="bar"><div style="width:25%" data-percent="25"></div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="flex">
+    <div class="card">
+      <h3>Secure Bank System (Python)</h3>
+      <p>Menu‑driven Bank System in Python</p>
+      <a class="btn small" href="https://github.com/pritamdahal75/Secure-Bank-System-Python-" target="_blank">
+        <i class="fab fa-github"></i> View Code
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Menu Driven User Management (Python)</h3>
+      <p>CLI User Management App</p>
+      <a class="btn small" href="https://github.com/pritamdahal75/menu-driven-user-management-python" target="_blank">
+        <i class="fab fa-github"></i> View Code
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Number Game (Python)</h3>
+      <p>Fun Interactive Python Game</p>
+      <a class="btn small" href="https://github.com/pritamdahal75/-Number-Game-Python" target="_blank">
+        <i class="fab fa-github"></i> View Code
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Book‑Pedia</h3>
+      <p>Book Management App</p>
+      <a class="btn small" href="https://github.com/pritamdahal75/book-pedia" target="_blank">
+        <i class="fab fa-github"></i> View Code
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm">
+    <p id="formMessage" style="display:none;font-weight:600"></p>
+
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Pritam Dahal
+</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const msgBox = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch("contact.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    msgBox.style.display = "block";
+
+    if (data.trim() === "success") {
+      msgBox.style.color = "green";
+      msgBox.innerText = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      msgBox.style.color = "red";
+      msgBox.innerText = "❌ Something went wrong!";
+    }
+  })
+  .catch(() => {
+    msgBox.style.display = "block";
+    msgBox.style.color = "red";
+    msgBox.innerText = "❌ Server error!";
+  });
+});
+</script>
+
+</body>
+</html>

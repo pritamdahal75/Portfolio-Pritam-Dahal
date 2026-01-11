@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pritam Dahal | Skills</title>
+  <style>
+    /* ====== General Styling ====== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    nav {
+      background: #222;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff5722;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      border: 2px solid #ff6600;
+    }
+
+    header h1 { margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    /* ====== Skills Container ====== */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 5%;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 20px;
+      color: #ff5722;
+    }
+
+    /* Circular progress */
+    .progress-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(#ff5722 var(--value), #ddd 0deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px auto;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #222;
+    }
+
+    .soft-skills-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .soft-skills-list li {
+      margin: 8px 0;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .soft-skills-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #ff5722;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="Protfolio.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="Protfolio.html">Projects</a>
+    <a href="Protfolio.html">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <img src="profiile.jpg" alt="Profile">
+    <h1>Pritam Dahal</h1>
+    <p>Detailed Skills Overview</p>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="skills-container">
+    
+    <!-- Frontend Card -->
+    <div class="skill-card">
+      <h3>Frontend Development</h3>
+      <div class="progress-circle" style="--value:95%;">HTML</div>
+      <div class="progress-circle" style="--value:90%;">CSS</div>
+      <div class="progress-circle" style="--value:70%;">JavaScript</div>
+      <div class="progress-circle" style="--value:60%;">Bootstrap</div>
+    </div>
+
+    <!-- Backend Card -->
+    <div class="skill-card">
+      <h3>Backend & Database</h3>
+      <div class="progress-circle" style="--value:30%;">PHP</div>
+      <div class="progress-circle" style="--value:5%;">Node.js</div>
+      <div class="progress-circle" style="--value:6%;">MySQL</div>
+      <div class="progress-circle" style="--value:4%;">MongoDB</div>
+    </div>
+
+    <!-- Soft Skills Card -->
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <ul class="soft-skills-list">
+        <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Problem Solving</li>
+        <li>Time Management</li>
+        <li>Adaptability</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2026 Pritam Dahal
+  </footer>
+
+</body>
+</html>
