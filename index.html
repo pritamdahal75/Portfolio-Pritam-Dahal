@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="protfolio.css">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Ensure all content is visible even if CSS has reveal animations */
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      display: block !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +28,7 @@
 </nav>
 
 <header id="home" class="reveal">
-  <img src="profiile.jpg" alt="Profile" class="profile-img">
+  <img src="profiilr.jpg" alt="Profile" class="profile-img">
   <h1>Pritam Dahal</h1>
   <p>Aspiring Frontend Developer</p>
 
@@ -110,7 +118,7 @@
 <section id="contact">
   <h2>Contact Me</h2>
 
-  <!-- Formspree form -->
+  <!-- Formspree integration -->
   <form id="contactForm" action="https://formspree.io/f/mdaanrka" method="POST">
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
@@ -130,7 +138,6 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Optional: dark mode toggle
 function toggleMode() {
   document.body.classList.toggle("dark-mode");
 }
@@ -138,4 +145,3 @@ function toggleMode() {
 
 </body>
 </html>
-
